@@ -2,14 +2,10 @@ package message;
 
 import user.User;
 
-abstract class AbstractMessage implements Message{
+abstract class AbstractMessage implements Message {
 
     private final User sender;
     private final User recipient;
-
-    protected AbstractMessage() {
-
-    }
 
     protected AbstractMessage(User sender, User recipient) {
         this.sender = sender;

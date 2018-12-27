@@ -19,7 +19,7 @@ public interface Node {
      * Connect to a Node
      * @param receiver
      */
-    void connect(Node receiver) throws Exception;
+    void connect(Node receiver);
 
     /**
      * Returns the ID/Number of a Node.

@@ -1,13 +1,18 @@
 package message;
 
+import user.User;
+
 public class TextMessage extends AbstractMessage {
 
 
     private final String msg;
 
-    TextMessage(String msg) {
+    public TextMessage(User sender, User recipient, String msg) {
+        super(sender, recipient);
         this.msg = msg;
     }
+
+
 
 
     /**
@@ -16,7 +21,6 @@ public class TextMessage extends AbstractMessage {
      * @return the transfer representation of this message.
      */
     @Override
-
     public String getTransferRepresentation() {
         return msg;
     }
@@ -28,6 +32,8 @@ public class TextMessage extends AbstractMessage {
      */
     @Override
     public String prettyPrint() {
-        return String.format("From: %s\nTo: %s\n\"%s\"", this.getSender(), this.getRecipient(), this.msg);
+        return String.format(
+                "From: %s%nTo: %s%nMsg: %s",
+                this.getSender().getUserName(), this.getRecipient().getUserName(), this.msg);
     }
 }
