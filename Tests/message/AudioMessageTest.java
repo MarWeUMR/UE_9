@@ -21,10 +21,13 @@ public class AudioMessageTest {
 
     @Test
     public void playVoiceMessage() {
-// keine ahnung was der quatsch hier soll
+    // was für eine bin Datei ?!
 
-        audioMsg.playVoiceMessage();
+        //audioMsg.playVoiceMessage();
+    }
 
-
+    @Test
+    public void audioMsgPrettyPrintTest() {
+        Assert.assertEquals("Here's to Adam.", audioMsg.prettyPrint());
     }
 }

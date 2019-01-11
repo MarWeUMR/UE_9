@@ -19,8 +19,8 @@ public class TextMessageTest {
     }
 
     @Test
-    public void prettyPrint() {
-        Assert.assertEquals("From: User_1\nTo: User_2\nMsg: Hello World", txtMsg.prettyPrint());
+    public void txtMsgPrettyPrint() {
+        Assert.assertEquals("From: User_1%nTo: User_2%nMsg: Hello World", txtMsg.prettyPrint());
     }
 
 }

@@ -10,7 +10,6 @@ public class AudioMessage extends AbstractDataMessage {
 
     public AudioMessage(User sender, User recipient, Audio audio) {
         super(sender, recipient, audio);
-        //this.audio = audio;
     }
 
     public void playVoiceMessage() {

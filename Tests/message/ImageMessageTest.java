@@ -17,4 +17,11 @@ public class ImageMessageTest {
     public void getMediaInfo() {
         Assert.assertEquals("This is an image.", imgMsg.getMediaInfo());
     }
+
+    @Test
+    public void imgMsgPrettyPrintTest() {
+        System.out.println(imgMsg.prettyPrint());
+//        Assert.assertEquals("Here's to Adam.", imgMsg.prettyPrint());
+    }
+
 }
