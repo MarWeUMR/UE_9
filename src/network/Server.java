@@ -8,10 +8,20 @@ public class Server implements Node {
     private Node[] nodes;
     private int connectedClients = 0; // counter um position im node array zu kontrollieren
 
+    /**
+     * Constructor for a server instance.
+     *
+     * @param size Number of clients the server can handle.
+     */
     public Server(int size) {
         this.nodes = new Node[size];
     }
 
+    /**
+     * Receives a message and sends it to the corresponding client
+     *
+     * @param message
+     */
     @Override
     public void receive(Message message) {
         System.out.println(
@@ -22,6 +32,11 @@ public class Server implements Node {
         send(message);
     }
 
+    /**
+     * Finds the clients to send a message to and sends it.
+     *
+     * @param message content
+     */
     @Override
     public void send(Message message) {
         Node recipient = establishConnection(message.getRecipient());
@@ -34,6 +49,11 @@ public class Server implements Node {
         recipient.receive(message);
     }
 
+    /**
+     * Connects a client to the server and increments the counter of available spots.
+     *
+     * @param receiver
+     */
     @Override
     public void connect(Node receiver) {
         this.nodes[connectedClients] = receiver;
@@ -51,6 +71,12 @@ public class Server implements Node {
         return null;
     }
 
+    /**
+     * Iterates over the list of connected nodes to find corresponding user.
+     *
+     * @param recipient User to receive the message
+     * @return client instance of the receiving user
+     */
     private Node establishConnection(User recipient) {
 
         for (Node n :

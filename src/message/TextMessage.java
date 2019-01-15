@@ -7,6 +7,13 @@ public class TextMessage extends AbstractMessage {
 
     private final String msg;
 
+    /**
+     * Constructor of a text message instance
+     *
+     * @param sender    message to
+     * @param recipient message from
+     * @param msg       text content
+     */
     public TextMessage(User sender, User recipient, String msg) {
         super(sender, recipient);
         this.msg = msg;

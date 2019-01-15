@@ -16,6 +16,7 @@ public class User {
 
     /**
      * Returns the screen name of the user.
+     *
      * @return the user name
      */
     public String getUserName() {
@@ -24,6 +25,7 @@ public class User {
 
     /**
      * Returns the first name of the user.
+     *
      * @return the first name
      */
     public String getFirstName() {
@@ -32,6 +34,7 @@ public class User {
 
     /**
      * Returns the last name of the user.
+     *
      * @return the last name
      */
     public String getLastName() {
@@ -40,6 +43,7 @@ public class User {
 
     /**
      * Returns the id/number of the user.
+     *
      * @return the id
      */
     public int getId() {

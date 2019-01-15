@@ -7,6 +7,12 @@ abstract class AbstractMessage implements Message {
     private final User sender;
     private final User recipient;
 
+    /**
+     * Constructor for an abstract message instance
+     *
+     * @param sender    message from
+     * @param recipient message to
+     */
     protected AbstractMessage(User sender, User recipient) {
         this.sender = sender;
         this.recipient = recipient;

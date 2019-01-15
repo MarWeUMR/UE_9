@@ -7,6 +7,13 @@ abstract class AbstractDataMessage extends AbstractMessage implements DataMessag
 
     private Data data;
 
+    /**
+     * Constructor for an abstract data message instance
+     *
+     * @param sender    message from
+     * @param recipient message to
+     * @param data      content type of the message
+     */
     protected AbstractDataMessage(User sender, User recipient, Data data) {
         super(sender, recipient);
         this.data = data;
